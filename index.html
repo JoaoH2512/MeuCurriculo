@@ -6,22 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Site com Bootstrap</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
   <div class="container">
     <header>
       <!-- Aqui vai o menu de navegação -->
+      <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Menu</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Sobre mim</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
       <main>
         <section>
           <!-- Aqui vai um breve comentario sobre mim -->
+          <div class="card" style="width: 18rem;">
+            <img src="img/peixe.jpg" class="card-img-top" alt="...">
+            <div class="card-body" >
+              <h5 class="card-title">Um breve comentario sobre mim</h5>
+              <p class="card-text">Meu nome é João henrique de Andrade Gimenes, tenho 15 anos, estudo na Etec MCM e estou cursando TI Técnico de Informatica para Internet. Nunca tive experiencia em algum tipo de emprego.</p>
+            </div>
+          </div>
         </section>
         <section>
           <!-- Aqui vão 4 cards mostrando os cursos-->
+          <h2 class="titulos">Cursos</h2>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="img/wizard.png" class="card-img-top" alt="" width="100" height="300">
+                <div class="card-body">
+                  <h5 class="card-title">Curso de Inglês</h5>
+                  <p class="card-text">Estou cursando Inglês a 2 anos na Wizard. Não estou nem perto de me tornar fluente porém estou no caminho e consigo me virar com o inglês básico.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="img/ohmori.jpg" class="card-img-top" alt="..."width="100" height="300">
+                <div class="card-body">
+                  <h5 class="card-title">Curso pré vestibular</h5>
+                  <p class="card-text">Fiz um curso pré vestibular na Ohmori por 1 ano para ter melhores chances de passar na Etec MCM.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </section>
         <section>
           <!-- Aqui vão estar minha competencias socio-emocionais -->
           <!-- vou usar um componente chamado  Accordion do bootstrap -->
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Nivel de python
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Meu nivel de python é iniciante mas consigo criar programas simples com bastante facilidade. 
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  HTML e CSS
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Estou estudando tanto HTML quanto CSS e este site eu mesmo criei usando HTML e CSS que aprendi no meu curso tecnico. Todos os meu progetos e atividades que fiz relacionado a TI esta no meu Github e vai estar disponivel para que possa ver na pagina de contato. 
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section>
           <!-- Aqui vai o formulario de contato -->
