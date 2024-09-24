@@ -748,6 +748,8 @@ progress {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
+  text-align: center;
+  margin-top: 30px;
 }
 
 @media (min-width: 576px) {
@@ -4606,6 +4608,7 @@ textarea.form-control-lg {
   border-radius: 0;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
+  text-align: center;
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
@@ -4651,6 +4654,12 @@ textarea.form-control-lg {
 }
 
 .accordion-item {
+  color: var(--bs-accordion-color);
+  background-color: var(--bs-accordion-bg);
+  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+}
+.accordion-item2 {
+  margin-top: 10px;
   color: var(--bs-accordion-color);
   background-color: var(--bs-accordion-bg);
   border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
